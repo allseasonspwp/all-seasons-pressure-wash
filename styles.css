@@ -19,7 +19,7 @@ img{display:block;max-width:100%}a{text-decoration:none;color:inherit}
 .menu{display:none;background:none;border:0;font-size:1.8rem}
 .btn{display:inline-flex;align-items:center;justify-content:center;background:var(--orange);border:2px solid var(--orange);color:#fff;padding:.95rem 1.25rem;border-radius:10px;font-weight:900;cursor:pointer;transition:.2s}
 .btn:hover{transform:translateY(-2px);filter:brightness(.98)}.btn.blue{background:var(--blue);border-color:var(--blue)}.btn.outline{background:transparent;border-color:#fff}.btn.white{background:#fff;border-color:#fff;color:var(--navy)}.btn.small{padding:.7rem 1rem}.btn.full{width:100%}
-.hero{position:relative;color:#fff;background:linear-gradient(100deg,rgba(3,22,42,.96),rgba(5,58,107,.78) 55%,rgba(7,121,201,.5)),url("assets/truck-hero.jpg") center 52%/cover;min-height:710px}
+.hero{position:relative;color:#fff;background:linear-gradient(100deg,rgba(3,22,42,.96),rgba(5,58,107,.78) 55%,rgba(7,121,201,.5)),url("truck-hero.jpg") center 52%/cover;min-height:710px}
 .hero-grid{display:grid;grid-template-columns:1.12fr .88fr;gap:3.2rem;align-items:center;padding:5.2rem 0}
 .eyebrow{display:inline-block;text-transform:uppercase;letter-spacing:.14em;font-size:.78rem;font-weight:950;color:#9fddff}.eyebrow.dark{color:var(--blue)}
 h1{font-size:clamp(3rem,6.3vw,5.65rem);line-height:.96;letter-spacing:-.045em;margin:.5rem 0 1.2rem}

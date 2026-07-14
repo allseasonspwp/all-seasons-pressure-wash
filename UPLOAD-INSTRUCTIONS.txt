@@ -1,0 +1,13 @@
+ALL SEASONS PRESSURE WASH — FIXED WEBSITE PACKAGE
+
+This version has all images in the repository root so GitHub mobile uploads will not break the image paths.
+
+UPLOAD STEPS
+1. Delete the old files from the GitHub repository, or replace them with the files from this package.
+2. Unzip this package in the iPhone Files app.
+3. Upload ALL extracted files—not the ZIP itself—to the root of the GitHub repository.
+4. Commit the changes to the main branch.
+5. Cloudflare Pages will redeploy automatically.
+6. Wait 1–3 minutes, then refresh the website.
+
+Important: Keep every filename exactly as provided. Filenames are case-sensitive.
