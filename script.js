@@ -1,19 +1,31 @@
+document.addEventListener("DOMContentLoaded", () => {
+  const menuButton = document.querySelector(".menu");
+  const navLinks = document.querySelector(".navlinks");
 
-const menu=document.querySelector('.menu');
-const nav=document.querySelector('.navlinks');
-if(menu){menu.addEventListener('click',()=>nav.classList.toggle('open'));}
-document.querySelectorAll('.navlinks a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('open')));
+  if (menuButton && navLinks) {
+    menuButton.addEventListener("click", () => {
+      navLinks.classList.toggle("open");
+      const isOpen = navLinks.classList.contains("open");
+      menuButton.setAttribute("aria-expanded", String(isOpen));
+    });
 
-const slider=document.querySelector('#slider');
-const before=document.querySelector('#beforeWrap');
-if(slider && before){slider.addEventListener('input',e=>before.style.width=e.target.value+'%');}
+    navLinks.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => {
+        navLinks.classList.remove("open");
+        menuButton.setAttribute("aria-expanded", "false");
+      });
+    });
+  }
 
-const form=document.querySelector('#quoteForm');
-if(form){
- form.addEventListener('submit',e=>{
-  e.preventDefault();
-  const data=new FormData(form);
-  const name=data.get('name')||'there';
-  alert(`Thanks, ${name}! This form is ready to connect to QuoteIQ or your business email.`);
- });
-}
+  const slider = document.querySelector("#slider");
+  const beforeWrap = document.querySelector("#beforeWrap");
+
+  if (slider && beforeWrap) {
+    const updateComparison = () => {
+      beforeWrap.style.width = `${slider.value}%`;
+    };
+
+    slider.addEventListener("input", updateComparison);
+    updateComparison();
+  }
+});
