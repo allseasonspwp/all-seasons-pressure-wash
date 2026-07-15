@@ -1,0 +1,44 @@
+ALL SEASONS WEBSITE — VERSION 15 / PHASE 2 BATCH 1
+
+WHAT IS INCLUDED
+- Google Analytics installed on every page
+- Microsoft Clarity installed on every page
+- Google Search Console verification file
+- LocalBusiness, WebSite, WebPage, Service and FAQ structured data
+- Improved titles, descriptions, canonical URLs and social metadata
+- Five dedicated service pages
+- Ten dedicated town pages
+- New service-area index page
+- Updated sitemap.xml and robots.txt
+- Phone-click and quote-form event tracking
+- Floating Call / Text / Quote buttons
+- Existing Web3Forms access key and working quote form retained
+
+UPLOAD
+1. Extract this ZIP.
+2. Upload ALL files to the ROOT of your GitHub repository.
+3. Replace the existing files.
+4. Commit directly to main.
+5. Wait for Cloudflare Pages to finish deploying.
+6. Test the homepage, one service page, one town page and the quote form.
+7. In Google Search Console, verify the site and submit:
+   https://allseasonspressurewash.com/sitemap.xml
+
+NEW SERVICE PAGES
+- roof-cleaning.html
+- house-soft-washing.html
+- concrete-driveway-cleaning.html
+- paver-cleaning-sealing.html
+- commercial-pressure-washing.html
+
+NEW TOWN PAGES
+- wethersfield-ct.html
+- rocky-hill-ct.html
+- glastonbury-ct.html
+- newington-ct.html
+- west-hartford-ct.html
+- berlin-ct.html
+- cromwell-ct.html
+- farmington-ct.html
+- manchester-ct.html
+- south-windsor-ct.html

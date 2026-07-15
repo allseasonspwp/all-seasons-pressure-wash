@@ -1,0 +1,28 @@
+{
+  "version": "15",
+  "release": "Phase 2 Batch 1",
+  "new_service_pages": [
+    "roof-cleaning.html",
+    "house-soft-washing.html",
+    "concrete-driveway-cleaning.html",
+    "paver-cleaning-sealing.html",
+    "commercial-pressure-washing.html"
+  ],
+  "new_town_pages": [
+    "wethersfield-ct.html",
+    "rocky-hill-ct.html",
+    "glastonbury-ct.html",
+    "newington-ct.html",
+    "west-hartford-ct.html",
+    "berlin-ct.html",
+    "cromwell-ct.html",
+    "farmington-ct.html",
+    "manchester-ct.html",
+    "south-windsor-ct.html"
+  ],
+  "tracking": {
+    "google_analytics": "G-GZS9L57X9P",
+    "microsoft_clarity": "xmnrlfl8np"
+  },
+  "search_console_verification": "google7c98e07ae34b7d4a.html"
+}

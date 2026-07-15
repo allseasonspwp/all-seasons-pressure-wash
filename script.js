@@ -29,3 +29,32 @@ document.addEventListener("DOMContentLoaded", () => {
     updateComparison();
   }
 });
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll(".compare").forEach((compare) => {
+    const slider = compare.querySelector(".compare-slider, #slider");
+    const wrap = compare.querySelector(".before-wrap, #beforeWrap");
+    if (slider && wrap) {
+      const update = () => { wrap.style.width = `${slider.value}%`; };
+      slider.addEventListener("input", update);
+      update();
+    }
+  });
+
+  document.querySelectorAll(".track-call").forEach((link) => {
+    link.addEventListener("click", () => {
+      if (typeof gtag === "function") {
+        gtag("event", "phone_click", {event_category: "lead", event_label: link.href});
+      }
+    });
+  });
+
+  document.querySelectorAll(".quote-track, #quoteForm").forEach((form) => {
+    form.addEventListener("submit", () => {
+      if (typeof gtag === "function") {
+        gtag("event", "generate_lead", {event_category: "lead", event_label: "website_quote_form"});
+      }
+    });
+  });
+});
