@@ -1,0 +1,13 @@
+ALL SEASONS WEBSITE — VERSION 12 READY
+
+Your Web3Forms access key is already installed.
+
+UPLOAD:
+1. Extract this ZIP.
+2. Upload ALL extracted files to the ROOT of the GitHub repository.
+3. Replace existing files.
+4. Commit directly to main.
+5. Wait for Cloudflare Pages to deploy.
+6. Open the website in a private Safari tab.
+7. Submit a test quote.
+8. Confirm it arrives at allseasonspwp@gmail.com.
