@@ -1,0 +1,41 @@
+ALL SEASONS WEBSITE — VERSION 17 COMPLETE
+
+PURPOSE
+This release keeps the complete Version 16 website and adds an explicit
+Cloudflare Pages Content-Type rule for sitemap.xml.
+
+INCLUDED
+- Complete website
+- Working Web3Forms quote form
+- Google Analytics
+- Microsoft Clarity
+- Google Search Console verification
+- Validated sitemap.xml
+- Cloudflare Pages _headers file
+- robots.txt
+- sitemap.txt diagnostic fallback
+- Five dedicated service pages
+- Ten dedicated town pages
+- Schema, canonical URLs and social metadata
+
+UPLOAD TO GITHUB
+1. Extract this ZIP.
+2. Upload EVERY extracted file to the ROOT of the repository.
+3. Replace existing files.
+4. Commit directly to main.
+5. Wait for the green Cloudflare deployment.
+
+VERIFY
+Open:
+https://allseasonspressurewash.com/sitemap.xml
+
+SEARCH CONSOLE
+Because you verified a DOMAIN PROPERTY, submit the COMPLETE URL:
+https://allseasonspressurewash.com/sitemap.xml
+
+Do not submit only sitemap.xml if Search Console does not display a fixed
+site prefix beside the entry box.
+
+Safari may display XML as readable text. That alone does not prove the file
+is invalid. The key checks are that the URL loads and Search Console accepts
+the complete sitemap URL.
