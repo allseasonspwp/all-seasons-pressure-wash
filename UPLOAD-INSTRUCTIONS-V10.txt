@@ -1,0 +1,19 @@
+ALL SEASONS WEBSITE — VERSION 10
+
+This is a COMPLETE website package.
+
+What changed:
+- Real email quote form retained
+- Professional soft-wash hero background added
+- Phone number placed on its own line below “Call or text”
+- More space below the logo
+- Improved mobile header layout
+- Stronger premium homepage headline
+- Cache-busting script version updated to V10
+
+UPLOAD:
+1. Extract the ZIP.
+2. Upload ALL extracted files to the ROOT of the GitHub repository.
+3. Replace existing files and commit directly to main.
+4. Wait for Cloudflare Pages to deploy the new commit.
+5. Open the website in a private Safari tab for the first test.

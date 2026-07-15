@@ -1,0 +1,16 @@
+ALL SEASONS WEBSITE — VERSION 11 (WEB3FORMS)
+
+This version removes FormSubmit and uses Web3Forms.
+
+REQUIRED BEFORE UPLOADING:
+1. Go to https://web3forms.com
+2. Create a free access key using allseasonspwp@gmail.com.
+3. Verify the email and copy the access key.
+4. Open BOTH index.html and contact.html.
+5. Find PASTE_YOUR_WEB3FORMS_ACCESS_KEY_HERE.
+6. Replace it with the real access key in both files.
+7. Upload every extracted file to the ROOT of the GitHub repository.
+8. Commit directly to main and wait for Cloudflare Pages to redeploy.
+9. Submit a test quote and check allseasonspwp@gmail.com.
+
+Web3Forms requires the access_key field. The key is intended to appear in client-side HTML.
