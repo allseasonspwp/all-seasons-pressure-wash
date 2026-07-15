@@ -1,0 +1,28 @@
+ALL SEASONS WEBSITE — VERSION 16 COMPLETE
+
+This is the complete Version 15 website plus the corrected XML sitemap.
+
+WHAT IS INCLUDED
+- Working Web3Forms quote form
+- Google Analytics
+- Microsoft Clarity
+- Google Search Console verification
+- Corrected sitemap.xml
+- robots.txt
+- Five dedicated service pages
+- Ten dedicated town pages
+- Service-area index page
+- LocalBusiness, Service and FAQ schema
+- SEO titles, descriptions and canonical URLs
+- Floating Call / Text / Quote buttons
+
+UPLOAD TO GITHUB
+1. Extract this ZIP.
+2. Upload ALL extracted files to the ROOT of the GitHub repository.
+3. Replace all existing files.
+4. Commit directly to main.
+5. Wait for Cloudflare Pages to finish deploying.
+6. Open:
+   https://allseasonspressurewash.com/sitemap.xml
+7. In Google Search Console, submit:
+   sitemap.xml
