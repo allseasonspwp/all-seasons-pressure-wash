@@ -1,0 +1,21 @@
+ALL SEASONS WEBSITE — VERSION 23
+
+NEW QUOTE FORM FEATURES
+- Customers can select multiple services.
+- Customers can add up to 5 project photos.
+- Accepted image types: JPG, PNG, WEBP, HEIC and HEIF.
+- Maximum size: 5 MB per photo.
+- Added client-side validation and mobile-friendly styling.
+
+IMPORTANT WEB3FORMS REQUIREMENT
+Multiple photo uploads use Web3Forms Advanced File Uploader, which requires an active paid Web3Forms plan.
+Without the paid feature, the rest of the quote form will still be present, but photo attachments may not be delivered.
+
+UPLOAD TO GITHUB
+1. Extract this ZIP.
+2. Upload all extracted files to the repository root.
+3. Replace existing files.
+4. Commit to main.
+5. Wait for Cloudflare Pages to deploy.
+6. Test both the homepage quote form and Contact page quote form from an iPhone.
+7. Submit a test request with two photos and confirm both arrive by email.

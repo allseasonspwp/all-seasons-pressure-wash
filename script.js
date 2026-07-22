@@ -58,3 +58,65 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll("#quoteForm").forEach((form) => {
+    const serviceBoxes = form.querySelectorAll('input[name="Requested Services[]"]');
+    const fileInput = form.querySelector('input[name="attachment"]');
+    const message = form.querySelector(".form-message");
+
+    form.addEventListener("submit", (event) => {
+      const hasService = Array.from(serviceBoxes).some((box) => box.checked);
+
+      if (!hasService) {
+        event.preventDefault();
+        if (message) {
+          message.textContent = "Please select at least one service.";
+          message.classList.add("show", "error");
+        }
+        const selector = form.querySelector(".service-selector");
+        if (selector) selector.scrollIntoView({ behavior: "smooth", block: "center" });
+        return;
+      }
+
+      if (fileInput && fileInput.files.length > 5) {
+        event.preventDefault();
+        if (message) {
+          message.textContent = "Please select no more than 5 photos.";
+          message.classList.add("show", "error");
+        }
+        return;
+      }
+
+      if (fileInput) {
+        const oversized = Array.from(fileInput.files).some(
+          (file) => file.size > 5 * 1024 * 1024
+        );
+        if (oversized) {
+          event.preventDefault();
+          if (message) {
+            message.textContent = "Each photo must be 5 MB or smaller.";
+            message.classList.add("show", "error");
+          }
+          return;
+        }
+      }
+
+      if (message) {
+        message.textContent = "Sending your quote request...";
+        message.classList.remove("error");
+        message.classList.add("show");
+      }
+    });
+
+    serviceBoxes.forEach((box) => {
+      box.addEventListener("change", () => {
+        if (message && Array.from(serviceBoxes).some((item) => item.checked)) {
+          message.textContent = "";
+          message.classList.remove("show", "error");
+        }
+      });
+    });
+  });
+});

@@ -277,3 +277,134 @@ footer a{color:inherit}
 }
 
 .county-section{margin:50px 0}.service-hub-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.service-hub-card,.town-card{background:#fff;padding:20px;border-radius:16px;box-shadow:var(--shadow);text-decoration:none;color:var(--ink)}.town-card-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.town-card{display:flex;flex-direction:column}.not-listed{background:var(--navy);color:#fff;padding:36px;border-radius:22px}.not-listed h2{color:#fff}@media(max-width:800px){.service-hub-grid,.town-card-grid{grid-template-columns:1fr 1fr}}@media(max-width:560px){.service-hub-grid,.town-card-grid{grid-template-columns:1fr}}
+
+.premium-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.premium-card{background:#fff;border-radius:18px;padding:24px;box-shadow:var(--shadow);border-top:4px solid var(--blue);text-decoration:none;color:var(--ink)}.premium-card h3{color:var(--navy)}.center-actions{text-align:center;margin-top:28px}.service-map-card{background:linear-gradient(135deg,var(--navy),#0b659a);color:#fff;padding:34px;border-radius:22px}.service-map-card h3{color:#fff}.reviews-placeholder{background:#fff;border-radius:22px;padding:38px;text-align:center;box-shadow:var(--shadow)}.stars{color:#f7a600;font-size:34px}@media(max-width:900px){.premium-grid{grid-template-columns:repeat(2,1fr)}}@media(max-width:620px){.premium-grid{grid-template-columns:1fr}}
+
+/* ===== V22 Live Google Reviews ===== */
+.trustindex-slider-wrap{
+  background:#fff;
+  border-radius:22px;
+  padding:22px;
+  box-shadow:var(--shadow);
+  overflow:hidden;
+}
+.review-actions{
+  display:flex;
+  justify-content:center;
+  gap:14px;
+  flex-wrap:wrap;
+  margin-top:24px;
+}
+.trustindex-contact-button{
+  background:#fff;
+  border-radius:20px;
+  padding:28px;
+  box-shadow:var(--shadow);
+  text-align:center;
+}
+@media(max-width:620px){
+  .trustindex-slider-wrap{padding:12px}
+  .review-actions .btn{width:100%;text-align:center}
+}
+
+
+/* ===== V23 Quote Form: Multiple Services + Photo Upload ===== */
+.service-selector{
+  border:1px solid #cbd7e2;
+  border-radius:12px;
+  padding:1rem;
+  margin:0;
+  min-width:0;
+}
+.service-selector legend{
+  padding:0 .35rem;
+  color:var(--navy);
+  font-weight:900;
+}
+.field-help{
+  margin:.1rem 0 .75rem;
+  color:var(--muted);
+  font-size:.84rem;
+}
+.service-options{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:.55rem;
+  max-height:245px;
+  overflow:auto;
+  padding:.15rem;
+}
+.service-choice{
+  display:flex;
+  align-items:center;
+  gap:.55rem;
+  background:#f5f8fb;
+  border:1px solid #dbe5ed;
+  border-radius:9px;
+  padding:.7rem .75rem;
+  cursor:pointer;
+  font-size:.88rem;
+  font-weight:750;
+  line-height:1.25;
+}
+.service-choice:hover{
+  border-color:var(--blue);
+  background:#eef8ff;
+}
+.service-choice input{
+  width:18px;
+  height:18px;
+  flex:0 0 18px;
+  padding:0;
+  accent-color:var(--blue);
+}
+.photo-upload-section{
+  border:2px dashed #9cc8e4;
+  background:#f4faff;
+  border-radius:12px;
+  padding:1rem;
+}
+.upload-title{
+  display:block;
+  color:var(--navy);
+  font-weight:900;
+}
+.upload-title span{
+  color:var(--muted);
+  font-weight:650;
+  font-size:.85rem;
+}
+.photo-upload-section input[type="file"]{
+  background:#fff;
+  padding:.8rem;
+}
+.form-message{
+  display:none;
+  border-radius:8px;
+  padding:.7rem .85rem;
+  background:#edf8ff;
+  color:var(--navy);
+  font-size:.86rem;
+  font-weight:750;
+}
+.form-message.show{display:block}
+.form-message.error{
+  background:#fff0f0;
+  color:#a52525;
+  border:1px solid #efbcbc;
+}
+.filepond--root{
+  margin-bottom:0;
+  font-family:inherit;
+}
+.filepond--panel-root{
+  background:#fff;
+  border:1px solid #cbd7e2;
+}
+.filepond--drop-label{
+  color:var(--navy);
+  font-weight:750;
+}
+@media(max-width:620px){
+  .service-options{grid-template-columns:1fr;max-height:280px}
+}
