@@ -1,0 +1,25 @@
+ALL SEASONS WEBSITE — VERSION 4.0 GALLERY
+
+NEW:
+- Full on-site Before & After Gallery
+- Touch-friendly comparison slider
+- Service category filters
+- Results navigation now stays on the website
+- Gallery SEO title, description, social preview and schema
+- Quote call-to-action and Instagram backup link
+- Mobile-responsive design
+
+UPLOAD:
+Because GitHub's browser uploader limits uploads to fewer than 100 files, use one of these:
+1. GitHub Desktop on a computer; or
+2. Upload in two batches and commit each batch; or
+3. Use Cloudflare Pages Direct Upload after extracting the ZIP.
+
+After deployment:
+- Open /gallery.html
+- Test the slider on iPhone
+- Test each category filter
+- Confirm the Results menu opens the gallery
+- Test the Free Quote button
+
+The gallery currently includes the real house before/after pair already supplied. Add future real projects as matched before-and-after image pairs.

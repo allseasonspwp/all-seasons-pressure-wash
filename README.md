@@ -1,13 +1,18 @@
-# All Seasons Pressure Wash LLC Website
+# All Seasons Pressure Wash Website — Version 3.0
 
-Static website prepared for GitHub + Cloudflare Pages.
+Production release for Cloudflare Pages.
 
-## Cloudflare Pages settings
-- Production branch: `main`
-- Framework preset: `None`
-- Build command: leave blank
-- Build output directory: `/`
-- Root directory: leave blank
+Included:
+- 100 HTML pages
+- Connecticut town and service landing pages
+- Live Google review widgets
+- Multiple-service quote selection
+- Optional multi-photo upload
+- Google Analytics and Microsoft Clarity
+- Web3Forms quote processing
+- Search Console verification
+- HTTPS redirects and security headers
 
-## Important
-The quote forms are demonstrations until connected to QuoteIQ, Formspree, or a business email endpoint.
+Important:
+- Test photo attachments after deployment because Web3Forms may require a paid attachment feature.
+- QuoteIQ is not connected yet because the account-specific public form URL or embed code is still needed.

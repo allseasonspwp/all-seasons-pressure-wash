@@ -120,3 +120,40 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll(".gallery-compare").forEach((compare) => {
+    const slider = compare.querySelector(".compare-slider");
+    const beforeWrap = compare.querySelector(".before-wrap");
+    const handle = compare.querySelector(".compare-handle");
+    const beforeImage = compare.querySelector(".before-image");
+
+    const update = () => {
+      const value = slider.value;
+      beforeWrap.style.width = `${value}%`;
+      handle.style.left = `${value}%`;
+      if (beforeImage) beforeImage.style.width = `${compare.clientWidth}px`;
+    };
+
+    slider.addEventListener("input", update);
+    window.addEventListener("resize", update);
+    update();
+  });
+
+  const filters = document.querySelectorAll(".gallery-filter");
+  const projects = document.querySelectorAll(".project-card[data-category]");
+
+  filters.forEach((button) => {
+    button.addEventListener("click", () => {
+      filters.forEach((item) => item.classList.remove("active"));
+      button.classList.add("active");
+      const filter = button.dataset.filter;
+
+      projects.forEach((project) => {
+        const categories = project.dataset.category.split(" ");
+        project.hidden = filter !== "all" && !categories.includes(filter);
+      });
+    });
+  });
+});
