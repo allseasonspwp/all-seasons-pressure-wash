@@ -1,4 +1,50 @@
 document.addEventListener("DOMContentLoaded", () => {
+  // Set the public Cloudflare site key here after preparing the Web3Forms integration.
+  // Store the secret key in Web3Forms only.
+  const siteKey = "";
+  if (!siteKey) return;
+
+  const forms = document.querySelectorAll('form[action="https://api.web3forms.com/submit"]');
+  if (!forms.length) return;
+
+  const prompt = "Complete the security check before sending your quote. If it does not load, call or text 860-200-1187.";
+  forms.forEach((form) => {
+    const widget = document.createElement("div");
+    widget.className = "cf-turnstile";
+    widget.dataset.sitekey = siteKey;
+    widget.dataset.size = "flexible";
+
+    const status = document.createElement("p");
+    status.className = "field-help";
+    status.setAttribute("role", "status");
+
+    const button = form.querySelector('button[type="submit"]');
+    if (button) button.before(widget, status);
+    else form.append(widget, status);
+
+    form.addEventListener("submit", (event) => {
+      const response = form.querySelector('input[name="cf-turnstile-response"]');
+      if (response?.value) {
+        status.textContent = "";
+        return;
+      }
+      event.preventDefault();
+      status.textContent = prompt;
+    }, { capture: true });
+  });
+
+  const script = document.createElement("script");
+  script.src = "https://challenges.cloudflare.com/turnstile/v0/api.js";
+  script.async = true;
+  script.addEventListener("error", () => {
+    forms.forEach((form) => {
+      form.querySelector(".cf-turnstile").nextElementSibling.textContent = prompt;
+    });
+  });
+  document.head.append(script);
+});
+
+document.addEventListener("DOMContentLoaded", () => {
   const menuButton = document.querySelector(".menu");
   const navLinks = document.querySelector(".navlinks");
 
@@ -51,7 +97,8 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   document.querySelectorAll(".quote-track, #quoteForm").forEach((form) => {
-    form.addEventListener("submit", () => {
+    form.addEventListener("submit", (event) => {
+      if (event.defaultPrevented) return;
       if (typeof gtag === "function") {
         gtag("event", "generate_lead", {event_category: "lead", event_label: "website_quote_form"});
       }
@@ -67,6 +114,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const message = form.querySelector(".form-message");
 
     form.addEventListener("submit", (event) => {
+      if (event.defaultPrevented) return;
       const hasService = Array.from(serviceBoxes).some((box) => box.checked);
 
       if (!hasService) {
@@ -90,6 +138,19 @@ document.addEventListener("DOMContentLoaded", () => {
       }
 
       if (fileInput) {
+        const allowedTypes = fileInput.accept.split(",");
+        const invalidType = Array.from(fileInput.files).some((file) =>
+          file.type ? !allowedTypes.includes(file.type) : !/\.(jpe?g|png|webp|hei[cf])$/i.test(file.name)
+        );
+        if (invalidType) {
+          event.preventDefault();
+          if (message) {
+            message.textContent = "Please choose JPG, PNG, WebP, HEIC or HEIF photos.";
+            message.classList.add("show", "error");
+          }
+          return;
+        }
+
         const oversized = Array.from(fileInput.files).some(
           (file) => file.size > 5 * 1024 * 1024
         );
